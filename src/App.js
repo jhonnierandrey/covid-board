@@ -13,42 +13,59 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //console.log('Document is loaded complete. using compnentDidMount')
 
     this.callApi();
+
   }
 
   callApi = () => {
 
     let url = '';
 
-    if(this.state.country === 'Global'){
+    if(this.state.country === '' || this.state.country === 'Global'){
       url = `https://covid19.mathdro.id/api`
-      //console.log('No Country--going Global')
     }else{
       url = `https://covid19.mathdro.id/api/countries/${this.state.country}`
-      //console.log(`Country found-- going to ${this.state.country}`)
     }
-    //const query = this.state.query;
-    
-    //console.log(url)
     
     fetch(url)
-    .then(response => response.json())
-    .then(result => this.setState({
-      confirmed : result.confirmed,
-      recovered : result.recovered,
-      deaths : result.deaths
-    }))
-    .then(this.updateTitle())
-
+    .then(response => {
+      if(response.status === 200){
+        return response.json()
+      }else{
+        console.log('There is a problem, error page comming soon');
+      }
+    })
+    .then(result => {
+      if(result){
+        this.setState({
+          confirmed : result.confirmed,
+          recovered : result.recovered,
+          deaths : result.deaths
+        })
+        this.updateTitle();
+      }
+      return
+    })
     
   }
 
   updateTitle = () => {
     let currentTitle = document.querySelector('.display-4');
+    let loadingStatus = document.querySelectorAll('.spinner-border');
 
     currentTitle.innerText = this.state.country;
+
+    if(this.state.confirmed.value !== '' ){
+      loadingStatus[0].style.display = 'none';
+    }
+    if(this.state.recovered.value !== '' ){
+      loadingStatus[1].style.display = 'none';
+    }
+    if(this.state.deaths.value !== '' ){
+      loadingStatus[2].style.display = 'none';
+    }
+    
   }
 
   render() {
