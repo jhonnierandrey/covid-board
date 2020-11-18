@@ -21,8 +21,14 @@ body {}
 .card-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .card {
     width: 250px;
+    margin-bottom: 0rem!important;
+}
+
+.loading-box {
+    text-align: center;
 }
