@@ -1,7 +1,8 @@
 import {React, Component} from 'react';
 
 import Navbar from './components/Navbar';
-import Title from './components/Title'
+import Title from './components/Title';
+import ChartView from './components/ChartView';
 
 class App extends Component {
 
@@ -33,7 +34,7 @@ class App extends Component {
       if(response.status === 200){
         return response.json()
       }else{
-        console.log('There is a problem, error page comming soon');
+        alert('We cannot process your request right now, please try again later.');
       }
     })
     .then(result => {
@@ -79,6 +80,11 @@ class App extends Component {
         </header>
         <main>
           <Title
+            confirmed = {this.state.confirmed.value}
+            recovered = {this.state.recovered.value}
+            deaths = {this.state.deaths.value}
+          />
+          <ChartView
             confirmed = {this.state.confirmed.value}
             recovered = {this.state.recovered.value}
             deaths = {this.state.deaths.value}
