@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.bg-dark {
+  background-color: #000000 !important;
+}
+
 .card-container {
   display: flex;
   justify-content: space-around;
@@ -20,6 +24,26 @@
 
 .loading-box {
   text-align: center;
+}
+
+footer {
+  padding: 5px;
+  font-size: small;
+  background-color: #000000;
+  color: #FFFFFF;
+  width: 100%;
+  position: absolute;
+}
+footer p {
+  text-align: center;
+  margin: 0px;
+}
+footer a {
+  color: #ffc107;
+}
+footer a:hover {
+  text-decoration: none;
+  color: #28a745;
 }
 
 @media (max-width: 1000px) {

@@ -3,6 +3,7 @@ import {React, Component} from 'react';
 import Navbar from './components/Navbar';
 import Title from './components/Title';
 import ChartView from './components/ChartView';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -90,6 +91,7 @@ class App extends Component {
             deaths = {this.state.deaths.value}
           />
         </main>
+        <Footer />
       </div>
     );
   }
