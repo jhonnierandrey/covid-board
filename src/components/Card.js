@@ -1,17 +1,16 @@
 import React from 'react';
 
-function Card(props) {
-    const mainClass = `card text-white bg-${props.mainClass} mb-3`;
-    const ico = `fas ${props.ico}`;
+    function Card(props) {
+        const mainClass = `card text-white bg-${props.mainClass} mb-3`;
+        const ico = `fas ${props.ico}`;
 
-    function newFormat(number) {
-        if(number !== undefined){
-            return Intl.NumberFormat('es-CO').format(number)
+        function newFormat(number) {
+            if(number !== undefined){
+                return Intl.NumberFormat('es-CO').format(number)
+            }
+            return;
         }
-        return;
-    }
 
-    //Intl.NumberFormat('es-CO').format(props.number)
     return(
         <div className={mainClass}>
             <div className="card-header"> <i className={ico}></i> {props.title}</div>
