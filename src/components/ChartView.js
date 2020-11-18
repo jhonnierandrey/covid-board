@@ -52,7 +52,7 @@ function ChartView(props) {
     
         let ctx = document.getElementById('myChart').getContext('2d');
     
-        let myChart = new Chart(ctx, {
+        new Chart(ctx, {
             type: 'bar',
             data: data,
             options: options,
