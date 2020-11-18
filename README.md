@@ -1,15 +1,33 @@
 # Covid Board
-Dashboard for Coronavirus Disease (COVID-19)
-Using API by https://covid19.mathdro.id/api
+Dashboard for Coronavirus Disease (COVID-19).
+Data for Argentina and Colombia.
+Using API created by [@mathdroid](https://github.com/mathdroid)
 
-## Available Scripts
+> Serving data from John Hopkins University CSSE as a [JSON API](https://covid19.mathdro.id)
 
-In the project directory, you can run:
+## How to use:
 
-### `npm i`
+1. Clone this repo
 
-Installs all dependencies required.
+    ```bash
+        git clone https://github.com/jhonnierandrey/covid-board 
+    ```
 
-### `npm start`
+2. Install all the required dependencies.
 
-Starts by default on port 3000
+    ```bash
+        npm i
+    ```
+
+3. To start on your local machine :
+
+    ```bash
+        npm start
+    ```
+## Contributing
+
+1. Fork it (<https://github.com/jhonnierandrey/covid-board/fork>)
+2. Create your own branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -m 'Add your commit'`)
+4. Push to the branch (`git push`)
+5. Create a new Pull Request
