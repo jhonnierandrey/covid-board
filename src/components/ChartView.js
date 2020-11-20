@@ -72,19 +72,19 @@ function ChartView(props) {
     return(
         <div>
             <div className="loading-box">
-                <div class="spinner-border text-warning" role="status">
-                    <span class="sr-only">Loading...</span>
+                <div className="spinner-border text-warning" role="status">
+                    <span className="sr-only">Loading...</span>
                 </div>
-                <div class="spinner-border text-success" role="status">
-                    <span class="sr-only">Loading...</span>
+                <div className="spinner-border text-success" role="status">
+                    <span className="sr-only">Loading...</span>
                 </div>
-                <div class="spinner-border text-danger" role="status">
-                    <span class="sr-only">Loading...</span>
+                <div className="spinner-border text-danger" role="status">
+                    <span className="sr-only">Loading...</span>
                 </div>
                 <p>Cargando tabla...</p>
             </div>
             <canvas id="myChart">
-            
+                
             </canvas>
         </div>
     );
