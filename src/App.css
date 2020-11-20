@@ -11,6 +11,11 @@
   background-color: #000000 !important;
 }
 
+.display-date {
+  text-transform: uppercase;
+  font-size: smaller;
+}
+
 .card-container {
   display: flex;
   justify-content: space-around;
@@ -73,6 +78,10 @@ footer a:hover {
   .title {
     padding-right: 0px;
     padding-left: 0px;
+  }
+
+  .display-container {
+    margin-bottom: 1rem !important;
   }
 
   .card-container {
