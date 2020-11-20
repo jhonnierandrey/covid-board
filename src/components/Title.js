@@ -3,10 +3,16 @@ import Card from './Card';
 
 function Title(props) {
 
+    let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    let today  = new Date();
+
     return(
         <div className="title jumbotron">
             <div className="card-container col">
-                <h1 className="display-4">Global</h1>
+                <div className="display-container">
+                    <h1 className="display-4">Global</h1>
+                    <span className="display-date"> { today.toLocaleDateString("es-CO", options) }</span>
+                </div>
                 <Card
                     mainClass = 'warning'
                     ico = 'fa-check-circle'
