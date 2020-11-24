@@ -27,7 +27,7 @@ Using API created by [@mathdroid](https://github.com/mathdroid)
 ## Contributing
 
 1. Fork it (<https://github.com/jhonnierandrey/covid-board/fork>)
-2. Create your own branch (`git checkout -b feature/fooBar`)
+2. Create your own branch (`git checkout -b newFeature/yourIdea`)
 3. Commit your changes (`git commit -m 'Add your commit'`)
 4. Push to the branch (`git push`)
 5. Create a new Pull Request
