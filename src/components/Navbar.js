@@ -21,7 +21,7 @@ function Navbar(props) {
             return;
         } else {
             for(let i = 0; i < countries.length; i++ ){
-                countryList.innerHTML += `<a class="dropdown-item" href="/${countries[i].name}" rel="${countries[i].name}"><img src="https://www.countryflags.io/${countries[i].id}/flat/32.png" alt="${countries[i].name}" />  ${countries[i].name}</a>`
+                countryList.innerHTML += `<a class="dropdown-item" href="/${countries[i].name}" rel="${countries[i].name}"><img src="https://flagcdn.com/w40/${countries[i].id}.png" alt="${countries[i].name}" />  ${countries[i].name}</a>`
             }
 
             document.querySelectorAll('.dropdown-item').forEach(item => {
@@ -50,10 +50,10 @@ function Navbar(props) {
                         <a className="nav-link" href="/Global" rel="Global" onClick={changeCountry}>Global  <i className="fas fa-globe"></i> <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/Argentina" rel="Argentina" onClick={changeCountry}>Argentina <img src="https://www.countryflags.io/ar/flat/32.png" alt="Argentina" /></a>
+                        <a className="nav-link" href="/Argentina" rel="Argentina" onClick={changeCountry}>Argentina <img src="https://flagcdn.com/w40/ar.png" alt="Argentina" /></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/Colombia" rel="Colombia" onClick={changeCountry}>Colombia <img src="https://www.countryflags.io/co/flat/32.png" alt="Colombia" /></a>
+                        <a className="nav-link" href="/Colombia" rel="Colombia" onClick={changeCountry}>Colombia <img src="https://flagcdn.com/w40/co.png" alt="Colombia" /></a>
                     </li>
                     <li className="nav-item dropdown" onClick={createCountryList}>
                         <a className="nav-link dropdown-toggle" href="/latam" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
