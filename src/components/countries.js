@@ -1,73 +1,73 @@
 const countries = [{
-    id: "AR",
+    id: "ar",
     name: "Argentina"
 },{
-    id: "BO",
+    id: "bo",
     name: "Bolivia"
 },{
-    id: "BR",
+    id: "br",
     name: "Brasil"
 },{
-    id: "CL",
+    id: "cl",
     name: "Chile"
 },{
-    id: "CO",
+    id: "co",
     name: "Colombia"
 },{
-    id: "CR",
+    id: "cr",
     name: "Costa Rica",
 },
 {
-    id: "CU",
+    id: "cu",
     name: "Cuba",
 },
 {
-    id: "EC",
+    id: "ec",
     name: "Ecuador",
 },
 {
-    id: "SV",
+    id: "sv",
     name: "El Salvador",
 },
 {
-    id: "GT",
+    id: "gt",
     name: "Guatemala",
 },
 {
-    id: "HT",
+    id: "ht",
     name: "Haití",
 },
 {
-    id: "HN",
+    id: "hn",
     name: "Honduras",
 },
 {
-    id: "MX",
+    id: "mx",
     name: "México",
 },
 {
-    id: "NI",
+    id: "ni",
     name: "Nicaragua",
 },
 {
-    id: "PA",
+    id: "pa",
     name: "Panamá",
 },
 {
-    id: "PY",
+    id: "py",
     name: "Paraguay",
 },
 {
-    id: "PE",
+    id: "pe",
     name: "Perú",
 },{
-    id: "DO",
+    id: "do",
     name: "República Dominicana",
 },{
-    id: "UY",
+    id: "uy",
     name: "Uruguay",
 },{
-    id: "VE",
+    id: "ve",
     name: "Venezuela",
 }
 ]
