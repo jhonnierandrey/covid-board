@@ -64,6 +64,12 @@ function Navbar(props) {
                         </div>
                     </li>
                 </ul>
+
+                <div className="navbar-ilinks">
+                    <span>Visitar: </span>
+                    <a class="btn btn-primary" href="https://covid19.who.int/" target="_blank" rel="noreferrer">WHO</a>
+                    <a class="btn btn-warning" href="https://coronavirus.jhu.edu/map.html" target="_blank" rel="noreferrer">JHU</a>
+                </div>
             </div>
         </nav>
         );
