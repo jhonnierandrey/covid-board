@@ -70,7 +70,7 @@ function ChartView(props) {
     checkData();
 
     return(
-        <div>
+        <div className='chart-view-container'>
             <div className="loading-box">
                 <div className="spinner-border text-warning" role="status">
                     <span className="sr-only">Loading...</span>
@@ -83,9 +83,11 @@ function ChartView(props) {
                 </div>
                 <p>Cargando tabla...</p>
             </div>
-            <canvas id="myChart">
+            <div>
+                <canvas id="myChart">
                 
-            </canvas>
+                </canvas>
+            </div>
         </div>
     );
 }
