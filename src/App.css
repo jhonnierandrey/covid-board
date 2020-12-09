@@ -3,12 +3,39 @@
   box-sizing: border-box;
 }
 
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.App main {
+  height: 100%;
+  background-color: #e9ecef;
+}
+
 .navbar-nav {
   align-items: center;
 }
 
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+.navbar-ilinks span {
+  color: #e9ecef;
+  text-transform: uppercase;
+}
+.navbar-ilinks a {
+  margin: 5px;
+}
+
 .bg-dark {
   background-color: #000000 !important;
+}
+
+.title {
+  margin-bottom: 0;
 }
 
 .display-date {
@@ -31,12 +58,21 @@
   text-align: center;
 }
 
+.show-chart-btn {
+  text-align: right;
+}
+
+.chart-view-container {
+  display: none;
+}
+
 /*
 .chart-container {
     position: relative;
     height:40vh;
     width:80vw
 }
+
 
 #myChart {
     display: block;
@@ -50,7 +86,6 @@ footer {
   background-color: #000000;
   color: #FFFFFF;
   width: 100%;
-  position: absolute;
 }
 footer p {
   text-align: center;
@@ -64,6 +99,14 @@ footer a:hover {
   color: #28a745;
 }
 
+@media (min-width: 768px) {
+  .chart-view-container {
+    margin: auto;
+    width: 50%;
+    height: 50vh;
+    position: relative;
+  }
+}
 @media (max-width: 1000px) {
   .card {
     width: auto;
@@ -71,6 +114,10 @@ footer a:hover {
   }
 }
 @media (max-width: 768px) {
+  .App {
+    height: auto;
+  }
+
   .navbar-nav {
     align-items: flex-start;
   }
