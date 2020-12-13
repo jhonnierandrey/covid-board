@@ -50,8 +50,8 @@ function Title(props) {
             </div>
             <hr className="my-4" />
             <div className="show-chart-btn">
-                <button onClick={showChart} type="button" class="btn btn-warning">
-                    <span>Mostrar tabla</span> <i class="far fa-chart-bar"></i>
+                <button onClick={showChart} type="button" className="btn btn-warning">
+                    <span>Mostrar tabla</span> <i className="far fa-chart-bar"></i>
                 </button>
             </div>
         </div>
