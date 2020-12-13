@@ -5,6 +5,9 @@ import Title from './components/Title';
 import ChartView from './components/ChartView';
 import Footer from './components/Footer';
 
+import countries from './components/countries';
+import handlers from './components/handlers';
+
 class App extends Component {
 
   state = {
@@ -20,6 +23,7 @@ class App extends Component {
     //alert('Estamos haciendo mejoras, durante este tiempo algunas caracteristicas estarán limitadas.')
 
     this.callApi();
+    handlers.createCountryOptions(countries);
 
   }
 

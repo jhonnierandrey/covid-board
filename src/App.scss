@@ -18,9 +18,9 @@ body {}
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    
     .header {}
-
+    
     main {
         height: 100%;
         background-color: $gray;
@@ -38,11 +38,6 @@ body {}
 }
 
 .navbar-ilinks{
-    span {
-        color: $gray;
-        text-transform: uppercase;
-    }
-
     a {
         margin: 5px;
     }
@@ -110,13 +105,13 @@ footer {
     color: #FFFFFF;
     width: 100%;
     //position: absolute;
-
+    
     p {
         text-align: center;
         //padding: 10px;
         margin: 0px;
     }
-
+    
     a {
         color: $yellow;
     }
@@ -140,18 +135,18 @@ footer {
         width: auto;
         margin-bottom: 1rem !important;
     }
- }
+}
 
 @media (max-width: 768px) {
     
     .App {
         height: auto;
     }
-
+    
     .navbar-nav {
         align-items: flex-start;
     }
-
+    
     .title {
         padding-right: 0px;
         padding-left: 0px;
@@ -167,4 +162,26 @@ footer {
         width: 100%;
         margin-bottom: 1rem !important;
     }
- }
+}
+
+@media (max-width: 992px) {
+
+    #navbarNav {
+        margin-top: 5px;
+    }
+    
+    ul.navbar-nav li {
+        width: 100%;
+    }
+    
+    .navbar-ilinks{
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+        
+        a {
+            width: 49%;
+            margin: 5px 0px;
+        }
+    }
+}
