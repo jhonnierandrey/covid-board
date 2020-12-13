@@ -83,7 +83,7 @@ const countries = [{
     name_en : "Peru"
 },{
     id: "do",
-    name: "República Dominicana",
+    name: "Rep. Dominicana",
     name_en : "Dominican Republic"
 },{
     id: "uy",
