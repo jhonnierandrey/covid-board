@@ -10,7 +10,13 @@ function Navbar(props) {
     function changeCountry(e){
         e.preventDefault();
 
-        state.country = e.target.rel;
+        if(e.target.rel){
+            state.country = e.target.rel;
+        }else if(e.target.alt){
+            state.country = e.target.alt;
+        }else{
+            state.country = 'Global';
+        }
         callApi()
     }
 
@@ -21,7 +27,7 @@ function Navbar(props) {
             return;
         } else {
             for(let i = 0; i < countries.length; i++ ){
-                countryList.innerHTML += `<a class="dropdown-item" href="/${countries[i].name}" rel="${countries[i].name}"><img src="https://flagcdn.com/w40/${countries[i].id}.png" alt="${countries[i].name}" />  ${countries[i].name}</a>`
+                countryList.innerHTML += `<a className="dropdown-item" href="/${countries[i].name}" rel="${countries[i].name}"><img src="https://flagcdn.com/w40/${countries[i].id}.png" alt="${countries[i].name}" />  ${countries[i].name}</a>`
             }
 
             document.querySelectorAll('.dropdown-item').forEach(item => {
@@ -66,9 +72,9 @@ function Navbar(props) {
                 </ul>
 
                 <div className="navbar-ilinks">
-                    <span>Visitar: </span>
-                    <a class="btn btn-primary" href="https://covid19.who.int/" target="_blank" rel="noreferrer">WHO</a>
-                    <a class="btn btn-warning" href="https://coronavirus.jhu.edu/map.html" target="_blank" rel="noreferrer">JHU</a>
+                    <span>Datos de: </span>
+                    <a className="btn btn-primary" href="https://covid19.who.int/" target="_blank" rel="noreferrer">WHO</a>
+                    <a className="btn btn-warning" href="https://coronavirus.jhu.edu/map.html" target="_blank" rel="noreferrer">JHU</a>
                 </div>
             </div>
         </nav>
