@@ -59,10 +59,14 @@
 }
 
 .show-chart-btn {
-  text-align: right;
+  text-align: center;
 }
 
 .chart-view-container {
+  display: none;
+}
+
+li.dropdown {
   display: none;
 }
 

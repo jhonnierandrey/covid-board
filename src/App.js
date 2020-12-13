@@ -16,7 +16,7 @@ class App extends Component {
 
   componentDidMount() {
 
-    alert('Estamos haciendo mejoras, durante este tiempo algunas caracteristicas estarán limitadas.')
+    //alert('Estamos haciendo mejoras, durante este tiempo algunas caracteristicas estarán limitadas.')
 
     this.callApi();
 
