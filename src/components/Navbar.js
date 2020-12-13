@@ -11,12 +11,16 @@ function Navbar(props) {
         e.preventDefault();
 
         if(e.target.rel){
-            state.country = e.target.rel;
+            state.countryDsp = e.target.rel;
         }else if(e.target.alt){
-            state.country = e.target.alt;
+            state.countryDsp = e.target.alt;
+        }else if(e.target.value){
+            state.countryDsp = countries[e.target.value].name;
+            state.countryCall = countries[e.target.value].name_en;
         }else{
             state.country = 'Global';
         }
+
         callApi()
     }
 
@@ -37,6 +41,26 @@ function Navbar(props) {
                 })
             })
         }
+    }
+
+    function createCountryOptions(){
+        let countryList = document.querySelector(".country-list");
+
+        if (countryList.childElementCount > 1) {
+            return;
+        } else {
+
+            console.log('No options jet')
+            for(let i = 0; i < countries.length; i++ ){
+                countryList.innerHTML += `<option value="${i}">${countries[i].name}</option>`;
+            }
+
+        }
+    }
+
+    function changeChange(e){
+        console.log('changing country...')
+        console.log(e.target.value)
     }
 
     //createCountryList();
@@ -68,6 +92,11 @@ function Navbar(props) {
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
 
                         </div>
+                    </li>
+                    <li onClick={createCountryOptions}>
+                        <select className="form-control country-list" onChange={changeCountry}>
+                            <option selected hidden>LATAM</option>
+                        </select>
                     </li>
                 </ul>
 
