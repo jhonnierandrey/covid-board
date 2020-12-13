@@ -8,7 +8,8 @@ import Footer from './components/Footer';
 class App extends Component {
 
   state = {
-    country: 'Global',
+    countryDsp: 'Global',
+    countryCall: 'Global',
     confirmed: '',
     recovered: '',
     deaths: '',
@@ -26,10 +27,10 @@ class App extends Component {
 
     let url = '';
 
-    if(this.state.country === '' || this.state.country === 'Global'){
+    if(this.state.countryCall === '' || this.state.countryCall === 'Global'){
       url = `https://covid19.mathdro.id/api`
     }else{
-      url = `https://covid19.mathdro.id/api/countries/${this.state.country}`
+      url = `https://covid19.mathdro.id/api/countries/${this.state.countryCall}`
     }
     
     fetch(url)
@@ -58,7 +59,7 @@ class App extends Component {
     let currentTitle = document.querySelector('.display-4');
     let loadingStatus = document.querySelectorAll('.spinner-border');
 
-    currentTitle.innerText = this.state.country;
+    currentTitle.innerText = this.state.countryDsp;
 
     if(this.state.confirmed.value !== '' ){
       loadingStatus[0].style.display = 'none';
@@ -77,8 +78,8 @@ class App extends Component {
       <div className="App" onLoad={this.initialStatus}>
         <header className="header">
           <Navbar
-          callApi = {this.callApi}
-          state = {this.state}
+            callApi = {this.callApi}
+            state = {this.state}
           />
         </header>
         <main>
