@@ -1,6 +1,6 @@
 # Covid Board
 Dashboard for Coronavirus Disease (COVID-19).
-Data for Argentina and Colombia.
+Data for LATAM.
 Using API created by [@mathdroid](https://github.com/mathdroid)
 
 > Serving data from John Hopkins University CSSE as a [JSON API](https://covid19.mathdro.id)
