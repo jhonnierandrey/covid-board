@@ -43,8 +43,8 @@ function Navbar(props) {
                 </ul>
 
                 <div className="navbar-ilinks">
-                    <a className="btn btn-primary" href="https://covid19.who.int/" target="_blank" rel="noreferrer">WHO</a>
-                    <a className="btn btn-warning" href="https://coronavirus.jhu.edu/map.html" target="_blank" rel="noreferrer">JHU</a>
+                    <a className="btn btn-primary" href="https://covid19.who.int/" target="_blank" rel="noreferrer" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<em>World Health Organization</em>">WHO</a>
+                    <a className="btn btn-warning" href="https://coronavirus.jhu.edu/map.html" target="_blank" rel="noreferrer" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<em>Johns Hopkins University</em>">JHU</a>
                 </div>
             </div>
         </nav>
