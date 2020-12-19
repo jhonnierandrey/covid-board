@@ -9,6 +9,12 @@ $green : #28a745;
 $red : #dc3545;
 $gray : #e9ecef;
 
+/* feature under revision */
+
+.show-chart-btn{
+    display: none !important;
+}
+
 body {}
 
 #root {}
@@ -184,4 +190,23 @@ footer {
             margin: 5px 0px;
         }
     }
+}
+
+@media (min-width: 1200px) {
+    header {
+        background-color: $black;
+    }
+
+    nav {
+        width: 1200px;
+        margin: auto;
+    }
+
+    main {
+        div.title, div.chart-view-container {
+            width: 1200px;
+            margin: auto;
+        }
+    }
+
 }
