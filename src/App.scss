@@ -1,7 +1,9 @@
+// Importing FontAwesome for Icons
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 
-
 * { box-sizing: border-box;}
+
+/* PALETTE */
 
 $black : #000000;
 $yellow : #ffc107;
@@ -15,17 +17,11 @@ $gray : #e9ecef;
     display: none !important;
 }
 
-body {}
-
-#root {}
-
 .App {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-    .header {}
     
     main {
         height: 100%;
@@ -33,7 +29,7 @@ body {}
     }
 }
 
-.navbar {}
+// NavBar 
 
 .navbar-nav {
     align-items: center;
@@ -52,6 +48,8 @@ body {}
 .bg-dark{
     background-color: $black !important;
 }
+
+// MAIN
 
 .title {
     margin-bottom: 0;
