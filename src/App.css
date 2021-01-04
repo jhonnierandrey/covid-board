@@ -9,19 +9,24 @@
   display: none !important;
 }
 
-.App {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+/* Structure */
+body #root {
   background-image: url("./wearmask.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.App main {
-  height: inherit;
-}
 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.App main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 header {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
@@ -151,11 +156,17 @@ footer a:hover {
   }
 }
 @media (max-width: 768px) {
-  .App {
-    height: auto;
-  }
   .App main {
+    height: inherit;
     display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App main .jumbotron {
+    background-color: transparent;
+    padding: 0px;
+  }
+  .App main .jumbotron hr {
+    display: none;
   }
 
   .navbar-nav {
@@ -183,7 +194,7 @@ footer a:hover {
 }
 @media (max-width: 992px) {
   #navbarNav {
-    margin-top: 5px;
+    margin-top: 1rem;
   }
 
   ul.navbar-nav li {
@@ -200,7 +211,12 @@ footer a:hover {
     margin: 5px 0px;
   }
 }
+/* Devices higher than 1200px */
 @media (min-width: 1200px) {
+  .App {
+    height: 100vh;
+  }
+
   header {
     background-color: #000000;
   }

@@ -20,17 +20,37 @@ $gray : #e9ecef;
     display: none !important;
 }
 
+/* Structure */
+
+body {
+    // height: 100vh;
+
+    #root {
+        background-image: url('./wearmask.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
 .App {
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url('./wearmask.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+    header {
+        // height: 10vh;
+    }
     
     main {
-        height: inherit;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    footer {
+        // height: 10vh;
     }
 }
 
@@ -58,7 +78,7 @@ header {
     background-color: transparent !important;
 }
 
-// MAIN
+// Main
 
 main {
     .jumbotron {
@@ -144,17 +164,17 @@ li.dropdown {
 }
 */
 
+// Footer
+
 footer {
     padding: 5px;
     font-size: small;
     background-color: $transparent-black;
     color: #FFFFFF;
     width: 100%;
-    //position: absolute;
     
     p {
         text-align: center;
-        //padding: 10px;
         margin: 0px;
     }
     
@@ -166,6 +186,10 @@ footer {
         color: $green;
     }
 }
+
+// Responsiveness
+
+////// for boxesss /////
 
 @media(min-width: 768px){
     .chart-view-container {
@@ -183,13 +207,30 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+//////////////////////////////
+
+@media (max-width: 576px) {
     
+}
+
+@media (max-width: 768px) {
+
     .App {
-        height: auto;
+        // height: inherit;
 
         main {
+            height: inherit;
             display: block;
+            background-color: $transparent-white;
+        }
+
+        main .jumbotron {
+            background-color: transparent;
+            padding: 0px;
+        }
+
+        main .jumbotron hr {
+            display: none;
         }
     }
     
@@ -217,7 +258,7 @@ footer {
 @media (max-width: 992px) {
 
     #navbarNav {
-        margin-top: 5px;
+        margin-top: 1rem;
     }
     
     ul.navbar-nav li {
@@ -236,7 +277,14 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {
+/* Devices higher than 1200px */
+
+@media (min-width: 1200px) { 
+
+    .App {
+        height: 100vh;
+    }
+    
     header {
         background-color: $black;
     }
@@ -255,5 +303,4 @@ footer {
             margin: auto;
         }
     }
-
 }
