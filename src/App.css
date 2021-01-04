@@ -14,10 +14,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url("./wearmask.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .App main {
-  height: 100%;
-  background-color: #e9ecef;
+  height: inherit;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .navbar-nav {
@@ -33,7 +39,11 @@
 }
 
 .bg-dark {
-  background-color: #000000 !important;
+  background-color: transparent !important;
+}
+
+main .jumbotron {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .title {
@@ -58,6 +68,7 @@
 .card {
   width: 250px;
   margin-bottom: 0rem !important;
+  border: 0px;
 }
 
 .loading-box {
@@ -74,6 +85,22 @@
 
 li.dropdown {
   display: none;
+}
+
+/* boxes colors */
+.bg-warning {
+  background-color: #000000;
+  background-image: linear-gradient(90deg, #000000 0%, #ffff02 100%);
+}
+
+.bg-success {
+  background-color: #000000;
+  background-image: linear-gradient(90deg, #000000 0%, #00ff00 100%);
+}
+
+.bg-danger {
+  background-color: #000000;
+  background-image: linear-gradient(90deg, #000000 0%, #ff0000 100%);
 }
 
 /*
@@ -93,7 +120,7 @@ li.dropdown {
 footer {
   padding: 5px;
   font-size: small;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
   width: 100%;
 }
@@ -102,11 +129,11 @@ footer p {
   margin: 0px;
 }
 footer a {
-  color: #ffc107;
+  color: #ffc105;
 }
 footer a:hover {
   text-decoration: none;
-  color: #28a745;
+  color: #28a746;
 }
 
 @media (min-width: 768px) {
@@ -126,6 +153,9 @@ footer a:hover {
 @media (max-width: 768px) {
   .App {
     height: auto;
+  }
+  .App main {
+    display: block;
   }
 
   .navbar-nav {
@@ -180,6 +210,9 @@ footer a:hover {
     margin: auto;
   }
 
+  main {
+    display: flex;
+  }
   main div.title, main div.chart-view-container {
     width: 1200px;
     margin: auto;

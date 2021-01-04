@@ -5,10 +5,13 @@
 
 /* PALETTE */
 
+$transparent-black : rgba( 0, 0, 0, 0.5);
+$transparent-white : rgba( 255, 255, 255, 0.5);
+
 $black : #000000;
-$yellow : #ffc107;
-$green : #28a745;
-$red : #dc3545;
+$yellow : rgba(255, 193, 5, 1);
+$green : rgba(40, 167, 70, 1);
+$red : rgba(220, 53, 70, 1);
 $gray : #e9ecef;
 
 /* feature under revision */
@@ -22,14 +25,20 @@ $gray : #e9ecef;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: url('./wearmask.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     
     main {
-        height: 100%;
-        background-color: $gray;
+        height: inherit;
     }
 }
 
 // NavBar 
+
+header {
+    background-color: $transparent-black !important;
+}
 
 .navbar-nav {
     align-items: center;
@@ -46,10 +55,16 @@ $gray : #e9ecef;
 }
 
 .bg-dark{
-    background-color: $black !important;
+    background-color: transparent !important;
 }
 
 // MAIN
+
+main {
+    .jumbotron {
+        background-color: $transparent-white;
+    }
+}
 
 .title {
     margin-bottom: 0;
@@ -73,6 +88,7 @@ $gray : #e9ecef;
 .card {
     width: 250px;
     margin-bottom: 0rem!important;
+    border: 0px;
 }
 
 .loading-box {
@@ -89,6 +105,28 @@ $gray : #e9ecef;
 
 li.dropdown {
     display: none;
+}
+
+/* boxes colors */
+
+.bg-warning {
+    // background-color: $yellow;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #000000 0%, #ffff02 100%);
+
+}
+
+.bg-success {
+    // background-color: $green;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #000000 0%, #00ff00 100%);
+
+}
+
+.bg-danger{
+    // background-color: $red;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #000000 0%, #ff0000 100%);
 }
 
 /*
@@ -109,7 +147,7 @@ li.dropdown {
 footer {
     padding: 5px;
     font-size: small;
-    background-color: $black;
+    background-color: $transparent-black;
     color: #FFFFFF;
     width: 100%;
     //position: absolute;
@@ -149,6 +187,10 @@ footer {
     
     .App {
         height: auto;
+
+        main {
+            display: block;
+        }
     }
     
     .navbar-nav {
@@ -205,6 +247,9 @@ footer {
     }
 
     main {
+
+        display: flex;
+
         div.title, div.chart-view-container {
             width: 1200px;
             margin: auto;
