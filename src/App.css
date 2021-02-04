@@ -157,7 +157,6 @@ footer a:hover {
 }
 @media (max-width: 768px) {
   .App main {
-    height: inherit;
     display: block;
     background-color: rgba(255, 255, 255, 0.5);
   }
