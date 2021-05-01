@@ -1,7 +1,10 @@
 // Importing FontAwesome for Icons
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 
-* { box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+}
 
 /* PALETTE */
 
