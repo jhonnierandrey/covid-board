@@ -93,7 +93,8 @@ main .jumbotron {
 }
 
 .card {
-  width: 250px;
+  width: 25%;
+  text-align: center;
   margin-bottom: 0rem !important;
   border: 0px;
   background-color: #222831 !important;
@@ -101,7 +102,7 @@ main .jumbotron {
 }
 
 .card:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .card-header {
@@ -193,6 +194,10 @@ footer a:hover {
   .card {
     width: 100%;
     margin-bottom: 1rem !important;
+  }
+
+  .card:hover {
+    transform: none;
   }
 }
 @media (max-width: 992px) {
