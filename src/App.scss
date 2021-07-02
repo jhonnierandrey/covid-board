@@ -1,5 +1,8 @@
 // Importing FontAwesome for Icons
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,300&display=swap');
+
 
 * {
     box-sizing: border-box;
@@ -12,15 +15,33 @@ $transparent-black : rgba( 0, 0, 0, 0.5);
 $transparent-white : rgba( 255, 255, 255, 0.5);
 
 $black : #000000;
-$yellow : rgba(255, 193, 5, 1);
-$green : rgba(40, 167, 70, 1);
-$red : rgba(220, 53, 70, 1);
-$gray : #e9ecef;
+$yellow : #FFD700;
+$green : #00FF00;
+$red : #FF0000;
+$gray : #DDDDDD;
+$blue: #1597BB;
 
-/* feature under revision */
+$deep-blue : #222831;
 
-.show-chart-btn{
-    display: none !important;
+/* Theme */
+
+$font-family: 'Poppins', sans-serif;
+
+.btn-primary {
+    background-color: $blue;
+}
+.btn-primary:hover {
+    background-color: $gray;
+    color: $blue;
+}
+
+.btn-warning {
+    background-color: $yellow;
+}
+
+.btn-warning:hover {
+    background-color: $gray;
+    color: $deep-blue;
 }
 
 /* Structure */
@@ -28,32 +49,26 @@ $gray : #e9ecef;
 body {
     // height: 100vh;
 
+    font-family: $font-family;
+
     #root {
-        background-image: url('./wearmask.jpg');
+        // background-image: url('./wearmask.jpg');
+        background-color: $deep-blue;
         background-repeat: no-repeat;
         background-size: cover;
     }
 }
 
 .App {
-    // height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     
-    header {
-        // height: 10vh;
-    }
-    
     main {
-        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-    
-    footer {
-        // height: 10vh;
     }
 }
 
@@ -85,16 +100,17 @@ header {
 
 main {
     .jumbotron {
-        background-color: $transparent-white;
+        background-color: transparent;
     }
 }
 
 .title {
     margin-bottom: 0;
+    color: $gray;
 }
 
 .display-4 {
-    font-size: 2.5rem;
+    font-size: bold;
 }
 
 .display-date {
@@ -112,18 +128,21 @@ main {
     width: 250px;
     margin-bottom: 0rem!important;
     border: 0px;
+    background-color: $deep-blue !important;
+    box-shadow: 0px 0px 20px $black;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+.card-header {
+    background-color: transparent;
+    border: 0px;
 }
 
 .loading-box {
     text-align: center;
-}
-
-.show-chart-btn {
-    text-align: center;
-}
-
-.chart-view-container{
-    display: none;
 }
 
 li.dropdown {
@@ -133,39 +152,22 @@ li.dropdown {
 /* boxes colors */
 
 .bg-warning {
+    color: $red !important;
     // background-color: $yellow;
-    background-color: #000000;
-    background-image: linear-gradient(90deg, #000000 0%, #ffff02 100%);
-
+    // background-image: linear-gradient(90deg, #000000 0%, #ffff02 100%);
 }
 
 .bg-success {
-    // background-color: $green;
-    background-color: #000000;
-    background-image: linear-gradient(90deg, #000000 0%, #00ff00 100%);
+    color: $green !important;
+    // background-image: linear-gradient(90deg, #000000 0%, #00ff00 100%);
 
 }
 
-.bg-danger{
+.bg-danger {
+    color: $gray !important;
     // background-color: $red;
-    background-color: #000000;
-    background-image: linear-gradient(90deg, #000000 0%, #ff0000 100%);
+    // background-image: linear-gradient(90deg, #000000 0%, #ff0000 100%);
 }
-
-/*
-.chart-container {
-    position: relative;
-    height:40vh;
-    width:80vw
-}
-
-
-#myChart {
-    display: block;
-    width: 512px;
-    height: 216px;
-}
-*/
 
 // Footer
 
@@ -194,15 +196,6 @@ footer {
 
 ////// for boxesss /////
 
-@media(min-width: 768px){
-    .chart-view-container {
-        margin: auto;
-        width: 50%;
-        height: 50vh;
-        position: relative;
-    }
-}
-
 @media (max-width: 1000px) { 
     .card {
         width: auto;
@@ -210,21 +203,15 @@ footer {
     }
 }
 
-//////////////////////////////
-
-@media (max-width: 576px) {
-    
-}
-
 @media (max-width: 768px) {
 
     .App {
-        // height: inherit;
 
+        height: auto;
+        
         main {
-            // height: inherit;
             display: block;
-            background-color: $transparent-white;
+            // background-color: $transparent-white;
         }
 
         main .jumbotron {
@@ -246,7 +233,9 @@ footer {
         padding-left: 0px;
     }
     .display-container {
+        width: 100%;
         margin-bottom: 1rem !important;
+        text-align: center;
     }
     .card-container {
         flex-direction: column;
@@ -284,10 +273,6 @@ footer {
 
 @media (min-width: 1200px) { 
 
-    .App {
-        height: 100vh;
-    }
-    
     header {
         background-color: $black;
     }
@@ -301,7 +286,7 @@ footer {
 
         display: flex;
 
-        div.title, div.chart-view-container {
+        div.title {
             width: 1200px;
             margin: auto;
         }
