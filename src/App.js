@@ -2,7 +2,6 @@ import {React, Component} from 'react';
 
 import Navbar from './components/Navbar';
 import Title from './components/Title';
-import ChartView from './components/ChartView';
 import Footer from './components/Footer';
 
 import countries from './components/countries';
@@ -88,11 +87,6 @@ class App extends Component {
         </header>
         <main>
           <Title
-            confirmed = {this.state.confirmed.value}
-            recovered = {this.state.recovered.value}
-            deaths = {this.state.deaths.value}
-          />
-          <ChartView
             confirmed = {this.state.confirmed.value}
             recovered = {this.state.recovered.value}
             deaths = {this.state.deaths.value}
