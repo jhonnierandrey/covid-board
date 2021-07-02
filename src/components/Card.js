@@ -15,7 +15,7 @@ import React from 'react';
         <div className={mainClass}>
             <div className="card-header"> <i className={ico}></i> {props.title}</div>
             <div className="card-body">
-                <h5 className="card-title"> {newFormat(props.number)}</h5>
+                <h3 className="card-title"> {newFormat(props.number)}</h3>
                 <div className="spinner-border" role="status">
                     <span className="sr-only">Loading...</span>
                 </div>
