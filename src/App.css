@@ -28,6 +28,7 @@
 
 /* Structure */
 body {
+  background-color: #000000;
   font-family: "Poppins", sans-serif;
 }
 body #root {
